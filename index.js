@@ -2,6 +2,7 @@ const express = require("express");
 const connectDB = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
 const roomRoutes = require("./routes/roomRoutes");
+const contentRoutes = require("./routes/contentRoutes");
 const dotenv = require("dotenv");
 const app = express();
 
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/user", userRoutes);
 app.use("/api/room", roomRoutes);
+app.use("/api/content", contentRoutes);
 
 app.listen(3000, () => {
   console.log("Server is running on port 3000");

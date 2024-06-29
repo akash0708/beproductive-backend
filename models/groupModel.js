@@ -11,7 +11,8 @@ const roomModel = mongoose.Schema({
       ref: "User",
     },
   ],
-  videos: [{ type: String, trim: true }],
+  videosId: [{ type: String, trim: true }],
+  playlistId: [{ type: String, trim: true }],
 });
 
 const Room = mongoose.model("Room", roomModel);
